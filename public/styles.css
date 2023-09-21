@@ -1,0 +1,443 @@
+/* nav bar design */
+body {
+  padding: 0;
+  margin: 0;
+}
+h3{
+  color:white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar-class {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  /* gap: 3rem; */
+  /* justify-content: space-evenly; */
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: black;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+a:hover {
+  /* color: #dd7973; */
+  color: rgba(39, 201, 234, 0.968);
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  /* font-size:2rex; */
+}
+
+/* logo design */
+
+#logo {
+  width: 8%;
+  background-color: aquamarine;
+}
+
+/* styling button */
+
+
+.btn-login{
+  width: 7%;
+  height: 2rem;
+  background-color: rgba(39, 201, 234, 0.968);
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  /* background-color: #a881af; */
+  box-shadow: 10cap;
+  border-radius: 10px;
+  color: white;
+}
+.btn {
+  width: 15%;
+  height: 2rem;
+  background-color: rgba(39, 201, 234, 0.968);
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  /* background-color: #a881af; */
+  box-shadow: 10cap;
+  border-radius: 10px;
+  color: white;
+}
+
+/* body style */
+
+body {
+  background-color: black;
+}
+.trainings {
+  position: relative;
+}
+
+h1 {
+  color: white;
+  font-family: "Audiowide", sans-serif;
+  font-size: 10vh;
+}
+
+/* first photo designing */
+.main_group img {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 3%;
+}
+.main_group p {
+  text-align: center;
+  letter-spacing: 0.7em;
+  color: white;
+  font-size: 1em;
+}
+h1 {
+  position: absolute;
+  text-align: center;
+  position: relative;
+  top: 10%;
+}
+
+.trainings img {
+  width: 80%;
+  height: 120vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* personal training */
+
+h1.train-h1{
+  font-size: 5rem;
+
+}
+.personal-training p {
+  position: absolute;
+  top: 20vh;
+  left: 35vh;
+  color: white;
+  font-size: 15vh;
+  font-family: Audiowide;
+}
+
+
+.group-train-main{
+  position: relative;
+}
+.group-training p{
+  position:absolute;
+  top: 1vh;
+  left: 35vh;
+  color: white;
+  font-size: 15vh;
+  font-family: Audiowide;
+}
+
+/* footer design */
+
+.footer p{
+  text-align: center;
+  color:white;
+  line-height: 0.5em;
+  font-size:1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.3em;
+  color:grey;
+}
+
+/* Trainers page design */
+
+.trainer1{
+  display: flex; 
+}
+
+.trainer1 img{
+  width: 50%; 
+  border-radius:10%;
+}
+
+.trainer1 p{
+ padding:3rem;
+  font-size: 1.2em;
+  line-height: 2.5rem;
+  color:white;
+}
+
+/* testimonial page design */
+
+
+div.testimonial{
+  width:100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  margin:0 auto;
+  border-radius: 20%;
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  position:absolute;
+  /* box-shadow: 5px 5px 20px rgba(219, 239, 243, 0.6); */
+ 
+}
+
+.testimonial p{
+
+  color:white;
+ 
+  padding:2rem;
+  padding-top:5rem;
+  padding-left:1em;
+  padding-right: 5em;
+
+
+}
+
+.testimonial img{
+  width:40%;
+  border-radius: 50%;
+  float:left;
+  margin:0 auto;
+
+
+}
+
+.main-testimonials{
+  width:100%;
+  height:100%;
+  display: flex;
+  position:relative;
+  /* flex-wrap: wrap; */
+}
+
+.testmonials-swipe{
+  display: flex;
+}
+
+
+.testmonials-swipe> p{
+ cursor: pointer;
+  color:white;
+  font-size:5rem;
+  padding: 10%;
+}
+/* slider button design
+.slide-btn{
+  background-color: black;
+  width:20%;
+  height:20%;
+ border-radius:50%;
+} */
+
+/* pricing  design*/
+
+.pricing{
+  display: flex;
+  /* flex-wrap: wrap; */
+    justify-content: space-around;
+}
+
+.pricing img{
+  width:40%;
+  border-radius:5%;
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+
+}
+
+h2{
+  color:white;
+  text-align: center;
+}
+/* pricing animation */
+
+/* .price:nth-child(2){
+  transition-delay: 200ms;
+}
+.price:nth-child(3){
+  transition-delay: 200ms;
+} */
+/* join today design */
+
+
+.join{
+  display: flex;
+  
+  justify-content: center;
+}
+.join button{
+ 
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: 100;
+  width:40%;
+  padding:2vh;
+  border-radius:10px;
+  align-items: center;
+  background-color: rgba(39, 201, 234, 0.968);
+  box-shadow: 10px 10px 20x rgba(232, 109, 38, 0.968);
+}
+
+/* sign up form */
+.sign-up{
+width:50%;
+box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+border-radius: 5%;
+padding:5%;
+
+}
+
+
+.sign-up label{
+
+  padding:2vh;
+  display: block;
+  /* font-size: large; */
+  color:white;
+}
+.sign-up>input{
+  background: #000;
+width:60%;
+color: black;
+box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  display: block;
+  padding: 1rem;
+  font-size: large;
+  border-radius:5px;
+  color:white;
+}
+.join{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-up button{
+position:relative;
+left:20%;
+  padding:2vh;
+  display: block;
+  font-size: large;
+  color:white;
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+}
+
+input[type=radio] {
+  width:4vh;
+  height: 4vh;
+  margin-top:1rem;
+}
+.radio>p{
+ font-size:10rem;
+}
+.radio{
+  display: flex;
+}
+
+/* to show in which page they are on */
+.glow{
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+}
+
+/* scheduling class style */
+ p{
+  color:white;
+  text-align:center;
+ 
+}
+
+/* shcedule table design */
+.schedule-main{
+  width:60%;
+  margin:0 auto;
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+}
+.headers{
+ width:100vh;
+}
+.headers{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  
+}
+/* schedule btn styling */
+.schedule-btn:hover{
+  width: 22%;
+  height: 2rem;
+  background-color: rgba(91, 218, 244, 0.968);
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  /* background-color: #a881af; */
+  box-shadow: 10cap;
+  font-size: 1em;
+  border-radius: 10px;
+  color: white;
+}
+.schedule-btn{
+  width: 20%;
+  height: 2rem;
+  background-color: rgba(39, 201, 234, 0.968);
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+  /* background-color: #a881af; */
+  box-shadow: 10cap;
+  font-size: 1em;
+  border-radius: 10px;
+  color: white;
+}
+.gap{
+  padding-left:3em;
+}
+/* styling an hr tag */
+hr{
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+}
+/* media queries for responsive flex boxes */
+
+@media only screen and (max-width: 600px) {
+  .trainer1{
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  .join{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .main-testimonials{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+/* radio button styling */
+.radio label{
+padding:3vh;
+}
+
+/* gallery of gym styling */
+
+/* index.css */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 5% 0%;
+  flex-wrap: nowrap;
+  justify-items: center;
+  align-items: center;
+}
+.mini-container{
+  width:50%;
+}
+.mini-container>img {
+  /* width:100vh;
+  height:80vh; */
+  width:100%;
+  box-shadow: 5px 5px 20px rgba(39, 201, 234, 0.968);
+}
+
+/* thanks page login btn */
+
+.center-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <nav class="nav-bar-class">
+      <img src="/images/logo.png" alt="logo" id="logo" />
+      <li><a href="/">HOME</a></li>
+      <li><a href="/#training-section">TRAININGS</a></li>
+      <li><a href="/testimonials">TESTIMONALS</a></li>
+      <li><a href="/trainers">TRAINERS</a></li>
+      <li><a href="/pricing">PRICING  </a></li>
+      <li><a href="/gallery">GALLERY </a></li>
+      <button class="btn" onclick="location.href='/join';">JOIN NOW -></button>
+    </nav>
+  </div>
+  <form action="/loginAuth" method="post">
+    <div class="join">
+
+      <div class="sign-up">
+        <h3 style="color:white"><%=message %></h3>
+          <label for="">Email</label>
+          <input type="email" name="email" id="emai" placeholder="Enter Your Email" required>
+          <br>
+          <label for="">Password</label>
+          <input type="password" name="password" id="password" placeholder="Enter Your password"  required>
+          <br><br>
+          <button>submit</button>
+          <div class="login">
+          </div>
+  
+      </div>
+  
+    </div>
+  </form>
+  
+    
+
+      <div class="footer">
+        <p>CopyRight@Hustle</p>
+        <p>2023</p>
+        <p>All Right Reserved</p>
+    </div>
+    </body>
+</body>
+</html>

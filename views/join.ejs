@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="nav-bar">
+    <nav class="nav-bar-class">
+      <img src="/images/logo.png" alt="logo" id="logo" />
+      <li><a href="/">HOME</a></li>
+      <li><a href="/#training-section">TRAININGS</a></li>
+      <li><a href="/testimonials">TESTIMONALS</a></li>
+      <li><a href="/trainers">TRAINERS</a></li>
+      <li><a href="/pricing">PRICING  </a></li>
+      <li><a href="/gallery">GALLERY </a></li>
+      <button class="btn" onclick="location.href='/join';">JOIN NOW -></button>
+    </nav>
+  </div>
+  
+    <form action="/newUser" method="post" form="form">
+      <div class="join">
+
+        
+        <div class="sign-up">
+         <h3 style="color:rgb(219, 50, 50);"><%=message %></h3>
+            <label for="">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            <br>
+            <label for="">Email</label>
+            <input type="email" name="email" id="emai" placeholder="Enter Your Email" required>
+            <br>
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone" required><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Create password" required>
+            <br>
+            <div class="radio">
+              <input type="radio" name="radio" id="radio">
+              <label for="radio">Premium</label>
+             
+            </div>
+            <div class="radio">
+              <input type="radio" name="radio" id="radio">
+              <label for="radio">Basic</label>
+                
+            </div>
+           
+            <button>submit</button><br>
+    
+            <a href="/login" ><h4>already have an account?login</h4></a>
+        </div>
+       
+      </div>
+    </form>
+   
+     
+    
+
+      <div class="footer">
+        <p>CopyRight@Hustle</p>
+        <p>2023</p>
+        <p>All Right Reserved</p>
+    </div>
+    </body>
+</body>
+</html>
