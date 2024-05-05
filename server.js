@@ -1,28 +1,31 @@
 import express from "express";
+import dotenv from "dotenv"
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import mongoose from "mongoose";
-
-
-
 //creating express server
 
+dotenv.config()
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 app.use(express.static("public"));
 var strin = app.use(bodyParser.urlencoded({ extended: true }));
 
-// connecting to database
 
-mongoose.connect("mongodb://127.0.0.1:27017/GymUsers", {
-  useNewUrlparser: true,
-});
+const connection = mongoose.connect(process.env.MONGO_URI)
+// mongoose.connect(uri, {
+//   useNewUrlparser: true,
+// });
+
+if(connection){
+  console.log("data base is connedted")
+}
 
 //creating database schema using mongoose
 //server side form validation using mongoose
-const newUsers = new mongoose.Schema({
+ const newUsers = new mongoose.Schema({
   name: String,
   email: String,
   phone: Number,
@@ -30,7 +33,7 @@ const newUsers = new mongoose.Schema({
 });
 
 // creating database model
-const newUserModel = new mongoose.model("user", newUsers);
+export const newUserModel = new mongoose.model("user", newUsers);
 
 //handling request using routes
 
@@ -62,50 +65,47 @@ app.post("/login", (req, res) => {
   });
   
  app.get("/book", (req, res)=>{
-  alert("hello");
+ res.render("schedule.ejs",{message:"Class has been booked successfully"});
  });
 //middle ware to check if the email exist or not
 
 //handling all the post request
-app.post("/newUser", (req, res) => {
-  var name = req.body.name;
-  res.locals.name=name;
-  const email = req.body.email;
-  const phone = req.body.phone; 
-  const password = req.body.password;
-  try{
-    async function getItems(){
-      const items=await newUserModel.find({email:email});
-      return items;
+
+app.post("/newUser", async(req, res) =>{
+
+  const {name, phone, email, password} = req.body
+  console.log(email)
+  if([name, phone, email, password].some((field)=> field.trim() == "")){
+    res.send("all fileds are required")
   }
-  getItems().then(function(foundItems){
-  
-      const len=foundItems.length;
-      res.locals.len=len;
-  
-      if(len===0){
-          console.log(res.locals);
-    const newUser = new newUserModel({
-      name: name,
-      email: email,
-      phone: phone,
-      password:password
-    });
-    name = name.toUpperCase();
-    //newUser.save();
-    res.render("Thanks.ejs", {name:name});
-    console.log("data has been saved successfully");
+
+  // checking if user exists in the database
+
+  const existingUser = await newUserModel.findOne({email})
+
+  if(existingUser){
+    res.render("join.ejs",{message:"account exists, Please login"});
+    
   }
-  else{
-      res.render("join.ejs",{message:"user already exists, try some other mail"});
+  const user = await newUserModel.create({
+    name,
+    email, 
+    phone,
+    password,
+
+  })
+
+  if(!user){
+    res.send("registration failed")
   }
-  
-  });
+
+  if(user){
+    console.log(user)
+    res.render("login.ejs",{message:"Registration Successful, Please Login"});
   }
-catch(err){
-  console.log(err.message);
-}
-});
+ 
+
+})
 
 app.get("/login", (req, res)=>{
 
@@ -123,11 +123,11 @@ app.post("/loginAuth", async (req,res)=>{
      var resultsAuth= await newUserModel.findOne({email:email, password:password});
      console.log(resultsAuth);
      if(resultsAuth!=null){
-       res.render("schedule.ejs", {name:res.locals.name});
+       res.render("schedule.ejs", {name:res.locals.name, message:""});
      }
    
      else{
-       res.render("login.ejs", {message:"email and password does not match"});
+       res.render("login.ejs", {message:"email and password does not match",});
      }
    }
   catch(err){

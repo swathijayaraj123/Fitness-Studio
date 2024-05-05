@@ -1,0 +1,49 @@
+app.post("/newUser", (req, res) => {
+  var name = req.body.name;
+  res.locals.name=name;
+  const email = req.body.email;
+  const phone = req.body.phone; 
+  const password = req.body.password;
+  // try{
+  //   async function getItems(){
+  //     const items=await newUserModel.findOne({email:email});
+  //     return items;
+  // }
+  // getItems().then(function(foundItems){
+  
+  //     const len=foundItems.length;
+  //     res.locals.len=len;
+  
+  //     if(len===0){
+  //         console.log(res.locals);
+    // const newUser = new newUserModel({
+    //   name: name,
+    //   email: email,
+    //   phone: phone,
+    //   password:password
+    // });
+    // name = name.toUpperCase();
+    // newUser.save();
+    // res.render("Thanks.ejs", {name:name});
+    // console.log("data has been saved successfully");
+  }
+//   else{
+//       res.render("join.ejs",{message:"user already exists, try some other mail"});
+//   }
+  
+//   });
+//   }
+// catch(err){
+//   console.log(err.message);
+// }}
+
+const user = await newUserModel.create(
+
+  {
+    email,
+    password,
+
+  }
+)
+
+);

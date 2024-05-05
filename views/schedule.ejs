@@ -1,10 +1,13 @@
 <%- include('nav') %>
 <div class="schedule">
-    <h2>Welcome<%=name %></h2>
+    <h2>Welcome</h2>
     <h2>Schedule YOur Class for Today</h2>
 </div>
 
-<h1><%=name %></h1>
+<div style="background-color: rgb(94, 246, 101); width:60%; margin-left:20%">
+
+    <h2 style="color:rgb(13, 97, 13);"><%=message %></h2>
+</div>
 <div  class="schedule-main">
     <div class="headers">
         <h3>sl no</h3>
@@ -21,7 +24,7 @@
         <p>Emma Chan</p>
         <p>zumba</p>
         <p>6:00am - 8:00am</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book" onclick="location.href='/book';">
     </div>
     <hr>
     <div class="headers gap">
@@ -29,7 +32,7 @@
         <p>Shaun Stafford</p>
         <p>Strength Training</p>
         <p>7:00am - 9:00am</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book" onclick="location.href='/book';">
     </div>
     <hr>
     <div class="headers gap">
@@ -37,14 +40,14 @@
         <p>Matt Roberts</p>
         <p>personal Training</p>
         <p>6:00am - 8:00am</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book" onclick="location.href='/book';">
     </div><hr>
     <div class="headers gap">
         <p>4</p>
         <p>Emma Chan</p>
         <p>zumba</p>
         <p>11:00am - 2:00pm</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book"  onclick="location.href='/book';">
     </div>
     <hr>
     <div class="headers gap">
@@ -52,7 +55,7 @@
         <p>Matt Roberts</p>
         <p>Strength Training</p>
         <p>6:00am - 8:00am</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book" onclick="location.href='/book';">
     </div>
     <hr>
     <div class="headers gap">
@@ -60,7 +63,7 @@
         <p>Shaun Stafford</p>
         <p>personal Training</p>
         <p>3:00pm - 5:00pm</p>
-        <input type="button" class="schedule-btn" value="Book" href="/book">
+        <input type="button" class="schedule-btn" value="Book" onclick="location.href='/book';">
     </div>
     <hr>
 </div>
